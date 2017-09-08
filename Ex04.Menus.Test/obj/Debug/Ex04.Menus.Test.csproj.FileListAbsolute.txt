@@ -5,3 +5,9 @@ C:\Users\USER\Documents\GitHub\c17-Ex04-Zamir-305701799-Asaf-305708356\Ex04.Menu
 C:\Users\USER\Documents\GitHub\c17-Ex04-Zamir-305701799-Asaf-305708356\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.csproj.CoreCompileInputs.cache
 C:\Users\USER\Documents\GitHub\c17-Ex04-Zamir-305701799-Asaf-305708356\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.exe
 C:\Users\USER\Documents\GitHub\c17-Ex04-Zamir-305701799-Asaf-305708356\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.pdb
+C:\Users\USER\Documents\GitHub\c17-Ex04-Zamir-305701799-Asaf-305708356\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Delegates.dll
+C:\Users\USER\Documents\GitHub\c17-Ex04-Zamir-305701799-Asaf-305708356\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Interfaces.dll
+C:\Users\USER\Documents\GitHub\c17-Ex04-Zamir-305701799-Asaf-305708356\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Delegates.pdb
+C:\Users\USER\Documents\GitHub\c17-Ex04-Zamir-305701799-Asaf-305708356\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Delegates.dll.config
+C:\Users\USER\Documents\GitHub\c17-Ex04-Zamir-305701799-Asaf-305708356\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Interfaces.pdb
+C:\Users\USER\Documents\GitHub\c17-Ex04-Zamir-305701799-Asaf-305708356\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Interfaces.dll.config

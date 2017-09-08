@@ -14,11 +14,27 @@ namespace Ex04.Menus.Delegates
             int userInput = getInputFromUser();
             if (userInput == 0)
             {
-                m_ParentMenuItem.BrowseMenu();
+                if (this.m_ParentMenuItem == null)
+                {
+                    Environment.Exit(0);
+                }
+                else
+                {
+                    m_ParentMenuItem.BrowseMenu();
+                }
+                
             }
             else
             {
-                ((MenuItem)m_Items[userInput]).BrowseMenu();
+                if (m_Items[userInput - 1] is MenuItem)
+                {
+                    ((MenuItem)m_Items[userInput - 1]).BrowseMenu();
+                }
+                else
+                {
+                    Console.WriteLine(((ActionItem)m_Items[userInput - 1]).InvokeActivity);
+                }
+                
             }
         }
        
@@ -33,9 +49,17 @@ namespace Ex04.Menus.Delegates
             {
                 Console.Clear();
 
-                for (int i = 1; i < m_Items.Count; i++)
+                for (int i = 0; i < m_Items.Count; i++)
                 {
-                    Console.WriteLine(m_Items[i]);
+                    Console.WriteLine("{0}. {1}",i+1,m_Items[i].Title);
+                }
+                if (this.m_ParentMenuItem==null)
+                {
+                    Console.WriteLine("0. Exit");
+                }
+                else
+                {
+                    Console.WriteLine("0. Back");
                 }
 
                 Console.Write("\nChoose an item from the list: ");
@@ -44,11 +68,12 @@ namespace Ex04.Menus.Delegates
                 {
                     Console.WriteLine("Please enter a number only");
                 }
-                else if (m_Items.Count < userInput) // if the user enters a number not within the range given
+                else if (m_Items.Count < userInput || userInput < 0) // if the user enters a number not within the range given
                 {
                     Console.WriteLine("Please Enter a number within the rangee of 0 - {0}", m_Items.Count);
+                    isValidInput = false;
                 }
-            } while (isValidInput);
+            } while (!isValidInput);
 
 
             return userInput;

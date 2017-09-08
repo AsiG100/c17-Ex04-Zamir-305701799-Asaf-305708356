@@ -5,7 +5,7 @@ namespace Ex04.Menus.Delegates
 {
     public class MainMenu
     {
-        private Item m_MenuItem;
+        private MenuItem m_MenuItem;
 
         //The main loop
         public void Show() 
@@ -14,13 +14,13 @@ namespace Ex04.Menus.Delegates
 
             do //Loops until the user exits the menu
             {
-               //s userInput = m_MenuItem.getInputFromUser();
+               m_MenuItem.BrowseMenu();
 
 
             } while (isOperating);
         }
 
-        public Item MenuItem
+        public MenuItem MenuItem
         {
             get
             {
@@ -32,28 +32,37 @@ namespace Ex04.Menus.Delegates
             }
         }
 
-        public void AddMenuItem(MenuItem i_Parent, string i_Title)
+        public MenuItem AddMenuItem(MenuItem i_Parent, string i_Title)
         {
+            MenuItem item = new MenuItem(i_Title, i_Parent);
+            i_Parent.Items.Add(item);
 
-                 i_Parent.Items.Add(new MenuItem(i_Title, i_Parent));
-
+            return item;
         }
 
-        public void AddMenuItem(string i_Title)
+        public MenuItem AddMenuItem(string i_Title)
         {
+            MenuItem item;
+
             if (m_MenuItem == null)
             {
-                m_MenuItem = new MenuItem(i_Title);
+                item = new MenuItem(i_Title);
+                m_MenuItem = item;
             }
             else
             {
                 throw new Exception("The menu is already initialized, please add to a specific parent");
             }
+
+            return item;
         }
 
-        public void AddActionItem(MenuItem i_Parent, string i_Title, Delegate i_Method)
+        public ActionItem AddActionItem(MenuItem i_Parent, string i_Title, Action i_Method)
         {
-               i_Parent.Items.Add(new ActionItem(i_Title, i_Parent));
+            ActionItem item = new ActionItem(i_Title, i_Parent, i_Method);
+            i_Parent.Items.Add(item);
+
+            return item;
         }
     }
 }

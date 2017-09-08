@@ -10,7 +10,8 @@ namespace Ex04.Menus.Test
     {
         static void Main(string[] args)
         {
-
+            Menus.DelegateMenu();
+            Console.ReadKey();
         }
     }
 }
