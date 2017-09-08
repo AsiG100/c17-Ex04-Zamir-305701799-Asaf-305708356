@@ -1,0 +1,6 @@
+C:\Users\USER\Documents\GitHub\c17-Ex04-Zamir-305701799-Asaf-305708356\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\USER\Documents\GitHub\c17-Ex04-Zamir-305701799-Asaf-305708356\Ex04.Menus.Interfaces\bin\Debug\Ex04.Menus.Interfaces.dll.config
+C:\Users\USER\Documents\GitHub\c17-Ex04-Zamir-305701799-Asaf-305708356\Ex04.Menus.Interfaces\bin\Debug\Ex04.Menus.Interfaces.dll
+C:\Users\USER\Documents\GitHub\c17-Ex04-Zamir-305701799-Asaf-305708356\Ex04.Menus.Interfaces\bin\Debug\Ex04.Menus.Interfaces.pdb
+C:\Users\USER\Documents\GitHub\c17-Ex04-Zamir-305701799-Asaf-305708356\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.dll
+C:\Users\USER\Documents\GitHub\c17-Ex04-Zamir-305701799-Asaf-305708356\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.pdb
