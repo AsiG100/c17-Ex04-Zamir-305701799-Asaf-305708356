@@ -32,7 +32,11 @@ namespace Ex04.Menus.Delegates
                 }
                 else
                 {
-                    Console.WriteLine(((ActionItem)m_Items[userInput - 1]).InvokeActivity);
+                    Console.Clear();
+                    ((ActionItem) m_Items[userInput - 1]).InvokeActivity.Invoke();
+                    Console.ReadKey();
+
+                    this.BrowseMenu();
                 }
                 
             }
@@ -48,7 +52,7 @@ namespace Ex04.Menus.Delegates
             do
             {
                 Console.Clear();
-
+                Console.WriteLine("====={0}=====\n",this.Title);
                 for (int i = 0; i < m_Items.Count; i++)
                 {
                     Console.WriteLine("{0}. {1}",i+1,m_Items[i].Title);

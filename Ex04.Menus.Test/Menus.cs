@@ -51,12 +51,12 @@ namespace Ex04.Menus.Test
 
         private static void showDate()
         {
-            Console.WriteLine(DateTime.Today);
+            Console.WriteLine(DateTime.Now.ToShortDateString());
         }
 
         private static void showTime()
         {
-            Console.WriteLine(DateTime.Now);
+            Console.WriteLine(DateTime.Now.ToShortTimeString());
         }
     }
 }
