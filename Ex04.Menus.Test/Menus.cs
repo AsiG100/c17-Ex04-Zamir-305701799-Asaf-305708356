@@ -3,26 +3,42 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Ex04.Menus.Delegates;
+using Ex04.Menus.Interfaces;
+
 
 namespace Ex04.Menus.Test
 {
-    static class Menus
+    class Menus : IActivity
     {
+        //``Menus``//
         public static void DelegateMenu()
         {
-            MainMenu menu = new MainMenu();
-            MenuItem main = menu.AddMenuItem("The main menu");
-            MenuItem item1 = menu.AddMenuItem(main, "Vision and spaces");
-            MenuItem item2 = menu.AddMenuItem(main, "Show Date/Time");
-            ActionItem numOfSpaces = menu.AddActionItem(item1, "Count spaces", numOfSpacesInLine);
-            ActionItem showVersion = menu.AddActionItem(item1, "Show version", showCorrentVersion );
-            ActionItem dateToday = menu.AddActionItem(item2, "Show date", showDate);
-            ActionItem timeNow = menu.AddActionItem(item2, "Show time",showTime);
+            Ex04.Menus.Delegates.MainMenu menu = new Ex04.Menus.Delegates.MainMenu();
+            Ex04.Menus.Delegates.MenuItem main = menu.AddMenuItem("The main menu");
+            Ex04.Menus.Delegates.MenuItem item1 = menu.AddMenuItem(main, "Vision and spaces");
+            Ex04.Menus.Delegates.MenuItem item2 = menu.AddMenuItem(main, "Show Date/Time");
+            Ex04.Menus.Delegates.ActionItem numOfSpaces = menu.AddActionItem(item1, "Count spaces", numOfSpacesInLine);
+            Ex04.Menus.Delegates.ActionItem showVersion = menu.AddActionItem(item1, "Show version", showCorrentVersion );
+            Ex04.Menus.Delegates.ActionItem dateToday = menu.AddActionItem(item2, "Show date", showDate);
+            Ex04.Menus.Delegates.ActionItem timeNow = menu.AddActionItem(item2, "Show time",showTime);
 
             menu.Show(); //Operates the program
         }
 
+        public static void InterfaceMenu()
+        {
+            Ex04.Menus.Interfaces.MainMenu menu = new Ex04.Menus.Interfaces.MainMenu();
+            Ex04.Menus.Interfaces.MenuItem main = menu.AddMenuItem("The main menu");
+            Ex04.Menus.Interfaces.MenuItem item1 = menu.AddMenuItem(main, "Vision and spaces");
+            Ex04.Menus.Interfaces.MenuItem item2 = menu.AddMenuItem(main, "Show Date/Time");
+            Menus actionPerformer = new Menus();
+            Ex04.Menus.Interfaces.ActionItem numOfSpaces = menu.AddActionItem(item1, "Count spaces", actionPerformer);
+            Ex04.Menus.Interfaces.ActionItem showVersion = menu.AddActionItem(item1, "Show version", actionPerformer);
+            Ex04.Menus.Interfaces.ActionItem dateToday = menu.AddActionItem(item2, "Show date", actionPerformer);
+            Ex04.Menus.Interfaces.ActionItem timeNow = menu.AddActionItem(item2, "Show time", actionPerformer);
+
+            menu.Show();
+        }
 
         //``Methods``//
         private static void numOfSpacesInLine()
@@ -57,6 +73,26 @@ namespace Ex04.Menus.Test
         private static void showTime()
         {
             Console.WriteLine(DateTime.Now.ToShortTimeString());
+        }
+
+        public void StartActivity(ActionItem i_Item)
+        {
+            if (i_Item.Title == "Count spaces")
+            {
+                numOfSpacesInLine();
+            }
+            else if (i_Item.Title == "Show version")
+            {
+                showCorrentVersion();
+            }
+            else if (i_Item.Title == "Show date")
+            {
+                showDate();
+            }
+            else if (i_Item.Title == "Show time")
+            {
+                showTime();
+            }
         }
     }
 }

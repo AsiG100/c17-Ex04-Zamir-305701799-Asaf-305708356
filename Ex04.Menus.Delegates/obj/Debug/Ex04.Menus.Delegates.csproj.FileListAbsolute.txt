@@ -12,3 +12,4 @@ C:\Users\USER\Documents\GitHub\c17-Ex04-Zamir-305701799-Asaf-305708356\Ex04.Menu
 C:\Users\USER\Documents\GitHub\c17-Ex04-Zamir-305701799-Asaf-305708356\Ex04.Menus.Delegates\bin\Debug\Xamarin.Forms.Xaml.xml
 C:\Users\USER\Documents\GitHub\c17-Ex04-Zamir-305701799-Asaf-305708356\Ex04.Menus.Delegates\obj\Debug\Ex04.Menus.Delegates.dll
 C:\Users\USER\Documents\GitHub\c17-Ex04-Zamir-305701799-Asaf-305708356\Ex04.Menus.Delegates\obj\Debug\Ex04.Menus.Delegates.pdb
+C:\Users\USER\Documents\GitHub\c17-Ex04-Zamir-305701799-Asaf-305708356\Ex04.Menus.Delegates\obj\Debug\Ex04.Menus.Delegates.csprojResolveAssemblyReference.cache

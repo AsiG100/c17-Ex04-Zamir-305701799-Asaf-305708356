@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace Ex04.Menus.Delegates
+namespace Ex04.Menus.Interfaces
 {
     public class MenuItem : Item
     {
@@ -34,7 +34,7 @@ namespace Ex04.Menus.Delegates
                 else
                 {
                     Console.Clear();
-                    ((ActionItem) m_Items[userInput - 1]).InvokeActivity.Invoke();
+                    ((ActionItem) m_Items[userInput - 1]).Activity.StartActivity(m_Items[userInput-1] as ActionItem);
                     Console.ReadKey();
 
                     this.BrowseMenu();

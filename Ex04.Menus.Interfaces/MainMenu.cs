@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Ex04.Menus.Delegates
+namespace Ex04.Menus.Interfaces
 {
     public class MainMenu
     {
@@ -14,7 +14,7 @@ namespace Ex04.Menus.Delegates
 
             do //Loops until the user exits the menu
             {
-              isOperating = m_MenuItem.BrowseMenu();
+               isOperating = m_MenuItem.BrowseMenu();
 
 
             } while (isOperating);
@@ -57,9 +57,9 @@ namespace Ex04.Menus.Delegates
             return item;
         }
 
-        public ActionItem AddActionItem(MenuItem i_Parent, string i_Title, Action i_Method)
+        public ActionItem AddActionItem(MenuItem i_Parent, string i_Title, IActivity i_Activity)
         {
-            ActionItem item = new ActionItem(i_Title, i_Parent, i_Method);
+            ActionItem item = new ActionItem(i_Title, i_Parent, i_Activity);
             i_Parent.Items.Add(item);
 
             return item;
